@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import BlogCard from "../User/BlogCard/BlogCard";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div className="container mx-auto mt-5">
+      <BlogCard />
+    </div>
+  );
+};
 
-export default Home
+export default Home;

@@ -1,9 +1,11 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
+import AllBlogs from "../Admin/AllBlogs";
 import Dashboard from "../Dashboard/Dashboard";
 import History from "../History/History";
 import Home from "../Home/Home";
 import Main from "../Main/Main";
+import Blogs from "../User/Blogs";
 
 const routes = createBrowserRouter([
   {
@@ -15,12 +17,22 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/history",
+        path: "history",
         element: <History />,
       },
       {
-        path: "/dashboard",
+        path: "dashboard",
         element: <Dashboard />,
+        children: [
+          {
+            index: "dashboard",
+            element: <AllBlogs />,
+          },
+          {
+            path: "allBlogs",
+            element: <Blogs />,
+          },
+        ],
       },
     ],
   },
