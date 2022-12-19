@@ -5,14 +5,22 @@ import {
   UPDATE_CONTENT,
 } from "../ActionTypes/ActionTypes";
 
-const initialState = {};
+const initialState = {
+  blogs: [],
+};
 
 export const blogReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_CONTENT:
-      return {};
+      return {
+        ...state,
+        blogs: [...state.blogs, action.payload],
+      };
     case ADD_CONTENT:
-      return {};
+      return {
+        ...state,
+        blogs: [...state.blogs, action.payload],
+      };
     case UPDATE_CONTENT:
       return {};
     case DELETE_CONTENT:

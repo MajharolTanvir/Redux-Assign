@@ -21,11 +21,11 @@ const routes = createBrowserRouter([
         element: <History />,
       },
       {
-        path: "dashboard",
+        path: "/dashboard",
         element: <Dashboard />,
         children: [
           {
-            index: "dashboard",
+            path: "/dashboard",
             element: <AllBlogs />,
           },
           {
