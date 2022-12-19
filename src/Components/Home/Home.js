@@ -18,9 +18,6 @@ const Home = () => {
     // [dispatch]
   );
 
-  const state = useSelector((state) => state);
-  console.log(state);
-
   return (
     <div className="container mx-auto mt-5">
       <BlogCard blogs={blogs} />
